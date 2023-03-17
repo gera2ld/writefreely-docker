@@ -9,8 +9,9 @@ version: '3'
 
 services:
   writefreely:
+    image: writefreely
     build:
-      context: .
+      context: https://github.com/gera2ld/writefreely-docker.git#main
     restart: unless-stopped
     environment:
       - HOST=https://write.example.com
