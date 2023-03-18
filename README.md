@@ -12,6 +12,8 @@ services:
     image: writefreely
     build:
       context: https://github.com/gera2ld/writefreely-docker.git#main
+      args:
+        - TARGETARCH=arm64
     restart: unless-stopped
     environment:
       - HOST=https://write.example.com

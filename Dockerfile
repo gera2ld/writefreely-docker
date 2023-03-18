@@ -1,6 +1,7 @@
 FROM alpine AS builder
 
 ARG TARGETARCH
+ENV TARGETARCH=${TARGETARCH:-amd64}
 
 WORKDIR /app
 
